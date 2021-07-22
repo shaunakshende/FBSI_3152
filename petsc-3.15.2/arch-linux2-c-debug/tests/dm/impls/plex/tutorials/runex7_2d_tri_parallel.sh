@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+# This script was created by gmakegentest.py
+
+
+
+# PATH for DLLs on windows
+PATH="$PATH":"/home/shaunak/Desktop/petsc-3.15.2/arch-linux2-c-debug/lib"
+
+exec='../ex7'
+testname='runex7_2d_tri_parallel'
+label='dm_impls_plex_tutorials-ex7_2d_tri_parallel'
+runfiles=''
+wPETSC_DIR='/home/shaunak/Desktop/petsc-3.15.2'
+petsc_dir='/home/shaunak/Desktop/petsc-3.15.2'
+petsc_arch='arch-linux2-c-debug'
+# Must be consistent with gmakefile.test
+testlogtapfile=/home/shaunak/Desktop/petsc-3.15.2/arch-linux2-c-debug/tests/test_${petsc_arch}_tap.log
+testlogerrfile=/home/shaunak/Desktop/petsc-3.15.2/arch-linux2-c-debug/tests/test_${petsc_arch}_err.log
+config_dir='/home/shaunak/Desktop/petsc-3.15.2/config'
+filter=''
+filter_output=''
+petsc_bindir='/home/shaunak/Desktop/petsc-3.15.2/lib/petsc/bin'
+DATAFILESPATH=${DATAFILESPATH:-""}
+args='-simplex -dm_view -petscpartitioner_type simple'
+diff_args=''
+timeoutfactor=1
+
+mpiexec=${PETSCMPIEXEC:-"/home/shaunak/Desktop/petsc-3.15.2/arch-linux2-c-debug/bin/mpiexec"}
+diffexec=${PETSCDIFF:-"${petsc_bindir}/petscdiff"}
+
+. "${config_dir}/petsc_harness.sh"
+
+# The diff flags come from script arguments
+diff_exe="${diffexec} ${diff_flags} ${diff_args}"
+mpiexec="${mpiexec} ${mpiexec_flags}"
+
+
+
+
+
+nsize_in=${nsize:-2}
+
+
+for insize in ${nsize_in}; do
+
+   petsc_testrun "${mpiexec} -n ${insize} ${exec} ${args} " ex7_2d_tri_parallel.tmp ${testname}.err "${label}" 
+   res=$?
+
+   if test $res = 0; then
+      petsc_testrun "${diff_exe} /home/shaunak/Desktop/petsc-3.15.2/src/dm/impls/plex/tutorials/output/ex7_2d_tri_parallel.out ex7_2d_tri_parallel.tmp" diff-${testname}.out diff-${testname}.out diff-${label} ""
+   else
+      petsc_report_tapoutput "" ${label} "SKIP Command failed so no diff"
+   fi
+
+done
+
+petsc_testend "/home/shaunak/Desktop/petsc-3.15.2/arch-linux2-c-debug/tests" 

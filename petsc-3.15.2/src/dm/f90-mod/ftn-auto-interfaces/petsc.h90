@@ -1,0 +1,10 @@
+      subroutine PetscPartitionerShellSetRandom(a,b,z)
+       PetscPartitioner a ! PetscPartitioner
+       PetscBool b ! PetscBool
+       PetscErrorCode z
+       end subroutine PetscPartitionerShellSetRandom
+      subroutine PetscPartitionerShellGetRandom(a,b,z)
+       PetscPartitioner a ! PetscPartitioner
+       PetscBool b ! PetscBool
+       PetscErrorCode z
+       end subroutine PetscPartitionerShellGetRandom

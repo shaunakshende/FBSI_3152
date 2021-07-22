@@ -1,0 +1,7 @@
+libfast in: /home/shaunak/Desktop/petsc-3.4.5/PetIGA_Immersed/include
+libfast in: /home/shaunak/Desktop/petsc-3.4.5/PetIGA_Immersed/src
+libfast in: /home/shaunak/Desktop/petsc-3.4.5/PetIGA_Immersed/docs
+libfast in: /home/shaunak/Desktop/petsc-3.4.5/PetIGA_Immersed/demo
+libfast in: /home/shaunak/Desktop/petsc-3.4.5/PetIGA_Immersed/test
+building libpetiga.a
+building libpetiga.so

@@ -1,0 +1,12 @@
+DM Object: Mesh 4 MPI processes
+  type: plex
+Mesh in 3 dimensions:
+  0-cells: 125 125 125 125
+  1-cells: 300 300 300 300
+  2-cells: 240 240 240 240
+  3-cells: 64 64 64 64
+Labels:
+  celltype: 4 strata with value/size (0 (125), 1 (300), 4 (240), 7 (64))
+  depth: 4 strata with value/size (0 (125), 1 (300), 2 (240), 3 (64))
+  marker: 1 strata with value/size (1 (312))
+  Face Sets: 5 strata with value/size (1 (36), 3 (36), 4 (36), 5 (36), 6 (36))

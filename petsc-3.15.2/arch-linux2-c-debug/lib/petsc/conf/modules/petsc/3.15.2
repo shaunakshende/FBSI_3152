@@ -1,0 +1,15 @@
+#%Module
+
+proc ModulesHelp { } {
+    puts stderr "This module sets the path and environment variables for petsc-3.15.2"
+    puts stderr "     see https://www.mcs.anl.gov/petsc/ for more information      "
+    puts stderr ""
+}
+module-whatis "PETSc - Portable, Extensible Toolkit for Scientific Computation"
+
+set petsc_dir   "/home/shaunak/Desktop/petsc-3.15.2"
+set petsc_arch  "arch-linux2-c-debug"
+
+setenv PETSC_ARCH "$petsc_arch"
+setenv PETSC_DIR "$petsc_dir"
+prepend-path PATH "/home/shaunak/Desktop/petsc-3.15.2/arch-linux2-c-debug/bin:/home/shaunak/Desktop/petsc-3.15.2/bin"

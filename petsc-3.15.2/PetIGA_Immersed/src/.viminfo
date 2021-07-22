@@ -1,0 +1,62 @@
+# Ce fichier viminfo a été généré par Vim 7.2.
+# Vous pouvez l'éditer, mais soyez prudent.
+
+# 'encoding' dans lequel ce fichier a été écrit
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~H
+# Historique ligne de commande (chronologie décroissante) :
+:wq
+:q!
+
+# Historique chaîne de recherche (chronologie décroissante) :
+
+# Historique expression (chronologie décroissante) :
+
+# Historique ligne de saisie (chronologie décroissante) :
+
+# Historique ligne de saisie (chronologie décroissante) :
+
+# Resgistres :
+
+# Marques dans le fichier :
+'0  13  37  ~/.bashrc
+'1  9  39  ~/.bashrc
+'2  1  0  ~/fsi_3d/compileVENUS
+'3  1  0  ~/fsi_par/compileVENUS
+
+# Liste de sauts (le plus récent en premier) :
+-'  13  37  ~/.bashrc
+-'  9  0  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  1  0  ~/fsi_3d/compileVENUS
+-'  1  0  ~/fsi_par/compileVENUS
+-'  1  0  ~/fsi_par/compileVENUS
+-'  1  0  ~/fsi_3d/compileVENUS
+-'  1  0  ~/fsi_par/compileVENUS
+-'  1  0  ~/fsi_par/compileVENUS
+-'  1  0  ~/fsi_3d/compileVENUS
+-'  1  0  ~/fsi_par/compileVENUS
+-'  1  0  ~/fsi_par/compileVENUS
+-'  1  0  ~/fsi_3d/compileVENUS
+-'  1  0  ~/fsi_par/compileVENUS
+-'  1  0  ~/fsi_par/compileVENUS
+
+# Historique des marques dans les fichiers (les plus récentes en premier) :
+
+> ~/.bashrc
+	"	13	37
+	^	13	38
+	.	13	37
+	+	9	40
+	+	12	22
+	+	11	0
+	+	13	37
+
+> ~/fsi_3d/compileVENUS
+	"	1	0
+
+> ~/fsi_par/compileVENUS
+	"	1	0

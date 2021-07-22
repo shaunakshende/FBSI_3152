@@ -1,0 +1,13 @@
+prefix=/home/shaunak/Desktop/petsc-3.15.2/arch-linux2-c-debug
+exec_prefix=${prefix}
+libdir=/home/shaunak/Desktop/petsc-3.15.2/arch-linux2-c-debug/lib
+includedir=${prefix}/include
+
+Name: Yaksa
+Description: A High Performance Noncontiguous Datatype Processing Engine
+Version: unreleased
+URL: http://www.mpich.org/yaksa
+Requires:
+Libs: -L${libdir} -lyaksa
+Libs.private: -lpthread 
+Cflags: -I${includedir}

@@ -1,0 +1,51 @@
+libfast in: /home/shaunak/Desktop/petsc-3.15.2/PetIGA_Immersed/include
+libfast in: /home/shaunak/Desktop/petsc-3.15.2/PetIGA_Immersed/src
+petigapc.c: In function ‘Color’:
+petigapc.c:34:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   if (i<L[0]) r = i - L[0]; if (i>R[0]) r = i - R[0];
+   ^~
+petigapc.c:34:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   if (i<L[0]) r = i - L[0]; if (i>R[0]) r = i - R[0];
+                             ^~
+petigapc.c:35:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   if (j<L[1]) g = j - L[1]; if (j>R[1]) g = j - R[1];
+   ^~
+petigapc.c:35:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   if (j<L[1]) g = j - L[1]; if (j>R[1]) g = j - R[1];
+                             ^~
+petigapc.c:36:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   if (k<L[2]) b = k - L[2]; if (k>R[2]) b = k - R[2];
+   ^~
+petigapc.c:36:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   if (k<L[2]) b = k - L[2]; if (k>R[2]) b = k - R[2];
+                             ^~
+petigapart.c: In function ‘IGA_PART2D_INNER’:
+petigapart.c:21:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   if (m == 0) m = 1; while (m > 0 && size % m) m--;
+   ^~
+petigapart.c:21:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   if (m == 0) m = 1; while (m > 0 && size % m) m--;
+                      ^~~~~
+petigapart.c: In function ‘IGA_PART3D_INNER’:
+petigapart.c:52:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   if (m == 0) m = 1; while (m > 0 && size % m) m--;
+   ^~
+petigapart.c:52:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   if (m == 0) m = 1; while (m > 0 && size % m) m--;
+                      ^~~~~
+petigainv.f90.in:23:0:
+
+ pure function Inverse(dim,detA,A) result (invA)
+ 
+Warning: ‘inverse’ defined but not used [-Wunused-function]
+petigainv.f90.in:23:0:
+
+ pure function Inverse(dim,detA,A) result (invA)
+ 
+Warning: ‘inverse’ defined but not used [-Wunused-function]
+libfast in: /home/shaunak/Desktop/petsc-3.15.2/PetIGA_Immersed/docs
+libfast in: /home/shaunak/Desktop/petsc-3.15.2/PetIGA_Immersed/demo
+libfast in: /home/shaunak/Desktop/petsc-3.15.2/PetIGA_Immersed/demo/demo
+libfast in: /home/shaunak/Desktop/petsc-3.15.2/PetIGA_Immersed/test
+building libpetiga.a
+building libpetiga.so

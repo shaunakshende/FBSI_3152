@@ -1,0 +1,23 @@
+      subroutine PetscSFSetGraphSection(a,b,c,z)
+       import tPetscSection,tPetscSF
+       PetscSF a ! PetscSF
+       PetscSection b ! PetscSection
+       PetscSection c ! PetscSection
+       PetscErrorCode z
+       end subroutine PetscSFSetGraphSection
+      subroutine PetscSFCreateByMatchingIndices(a,b,c,d,e,f,g,h,i,j,k,z)
+       import tPetscSF&
+     &
+       PetscLayout a ! PetscLayout
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscInt e ! PetscInt
+       PetscInt f ! PetscInt
+       PetscInt g ! PetscInt
+       PetscInt h ! PetscInt
+       PetscInt i ! PetscInt
+       PetscSF j ! PetscSF
+       PetscSF k ! PetscSF
+       PetscErrorCode z
+       end subroutine PetscSFCreateByMatchingIndices

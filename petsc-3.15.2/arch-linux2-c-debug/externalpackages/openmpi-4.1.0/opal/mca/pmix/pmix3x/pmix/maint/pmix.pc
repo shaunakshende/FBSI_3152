@@ -1,0 +1,12 @@
+prefix=/home/shaunak/Desktop/petsc-3.15.2/arch-linux2-c-debug
+exec_prefix=${prefix}
+libdir=/home/shaunak/Desktop/petsc-3.15.2/arch-linux2-c-debug/lib
+includedir=${prefix}/include
+
+Name: pmix
+Description: Process Management Interface for Exascale (PMIx)
+Version: 3.2.2
+URL: https://pmix.org/
+Requires: 
+Libs: -L${libdir} -lpmix 
+Cflags: -I${includedir}

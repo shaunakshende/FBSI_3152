@@ -1,0 +1,65 @@
+Running test to verify correct installation
+Using PETIGA_DIR=/home/shaunak/Desktop/petsc-3.4.5/PetIGA_Immersed
+Using PETSC_DIR=/home/shaunak/Desktop/petsc-3.4.5
+Using PETSC_ARCH=arch-linux2-c-opt
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Boundary set Value (Dirichlet). Init!
+Completed test

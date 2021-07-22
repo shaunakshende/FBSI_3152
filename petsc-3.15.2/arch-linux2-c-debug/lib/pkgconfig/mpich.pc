@@ -1,0 +1,20 @@
+# this gives access to the mpich header files
+prefix=/home/shaunak/Desktop/petsc-3.15.2/arch-linux2-c-debug
+exec_prefix=${prefix}
+libdir=/home/shaunak/Desktop/petsc-3.15.2/arch-linux2-c-debug/lib
+includedir=${prefix}/include
+
+Name: mpich
+Description: High Performance and portable MPI
+Version: 3.4.1
+URL: http://www.mcs.anl.gov/research/projects/mpich
+Requires:
+Libs: -Wl,-rpath -Wl,/home/shaunak/Desktop/petsc-3.15.2/arch-linux2-c-debug/lib -Wl,--enable-new-dtags   -L${libdir} -lmpi  -lm   -lpthread  -lrt 
+Cflags:  -fPIC -fstack-protector -g3 -I${includedir}
+
+# pkg-config does not understand Cxxflags, etc. So we allow users to
+# query them using the --variable option
+
+cxxflags= -fstack-protector -g -fPIC -I${includedir}
+fflags=-fPIC -ffree-line-length-0 -g -I${includedir}
+fcflags=-fPIC -ffree-line-length-0 -g -I${includedir}

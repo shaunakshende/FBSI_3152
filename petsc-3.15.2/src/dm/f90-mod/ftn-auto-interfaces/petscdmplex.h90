@@ -1,0 +1,1341 @@
+      subroutine DMPlexGetPointLocal(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetPointLocal
+      subroutine DMPlexGetPointLocalField(a,b,c,d,e,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscInt e ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetPointLocalField
+      subroutine DMPlexGetPointGlobal(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetPointGlobal
+      subroutine DMPlexGetPointGlobalField(a,b,c,d,e,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscInt e ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetPointGlobalField
+      subroutine DMPlexGetScale(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscUnit b ! PetscUnit
+       PetscReal c ! PetscReal
+       PetscErrorCode z
+       end subroutine DMPlexGetScale
+      subroutine DMPlexSetScale(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscUnit b ! PetscUnit
+       PetscReal c ! PetscReal
+       PetscErrorCode z
+       end subroutine DMPlexSetScale
+      subroutine DMPlexCreateRigidBody(a,b,c,z)
+       import tMatNullSpace,tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       MatNullSpace c ! MatNullSpace
+       PetscErrorCode z
+       end subroutine DMPlexCreateRigidBody
+      subroutine DMPlexCreateRigidBodies(a,b,c,d,e,f,z)
+       import tMatNullSpace,tDM,tDMLabel
+       DM a ! DM
+       PetscInt b ! PetscInt
+       DMLabel c ! DMLabel
+       PetscInt d (*) ! PetscInt
+       PetscInt e (*) ! PetscInt
+       MatNullSpace f ! MatNullSpace
+       PetscErrorCode z
+       end subroutine DMPlexCreateRigidBodies
+      subroutine DMPlexSetMaxProjectionHeight(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexSetMaxProjectionHeight
+      subroutine DMPlexGetMaxProjectionHeight(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetMaxProjectionHeight
+      subroutine DMPlexGlobalToLocalBasis(a,b,z)
+       import tDM,tVec
+       DM a ! DM
+       Vec b ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexGlobalToLocalBasis
+      subroutine DMPlexLocalToGlobalBasis(a,b,z)
+       import tDM,tVec
+       DM a ! DM
+       Vec b ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexLocalToGlobalBasis
+      subroutine DMPlexCreateBasisRotation(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscReal b ! PetscReal
+       PetscReal c ! PetscReal
+       PetscReal d ! PetscReal
+       PetscErrorCode z
+       end subroutine DMPlexCreateBasisRotation
+      subroutine DMPlexInsertBoundaryValues(a,b,c,d,e,f,g,z)
+       import tDM,tVec
+       DM a ! DM
+       PetscBool b ! PetscBool
+       Vec c ! Vec
+       PetscReal d ! PetscReal
+       Vec e ! Vec
+       Vec f ! Vec
+       Vec g ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexInsertBoundaryValues
+      subroutine DMPlexInsertTimeDerivativeBoundaryValues(a,b,c,d,e,f,g,&
+     &z)
+       import tDM,tVec
+       DM a ! DM
+       PetscBool b ! PetscBool
+       Vec c ! Vec
+       PetscReal d ! PetscReal
+       Vec e ! Vec
+       Vec f ! Vec
+       Vec g ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexInsertTimeDerivativeBoundaryValues
+      subroutine DMPlexGetGeometryFVM(a,b,c,d,z)
+       import tDM,tVec
+       DM a ! DM
+       Vec b ! Vec
+       Vec c ! Vec
+       PetscReal d ! PetscReal
+       PetscErrorCode z
+       end subroutine DMPlexGetGeometryFVM
+      subroutine DMPlexGetGradientDM(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscFV b ! PetscFV
+       DM c ! DM
+       PetscErrorCode z
+       end subroutine DMPlexGetGradientDM
+      subroutine DMPlexFindVertices(a,b,c,d,e,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscReal c (*) ! PetscReal
+       PetscReal d ! PetscReal
+       PetscInt e (*) ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexFindVertices
+      subroutine DMPlexComputeProjection3Dto2D(a,b,c,z)
+       PetscInt a ! PetscInt
+       PetscScalar b (*) ! PetscScalar
+       PetscReal c (*) ! PetscReal
+       PetscErrorCode z
+       end subroutine DMPlexComputeProjection3Dto2D
+      subroutine DMPlexComputeGeometryFEM(a,b,z)
+       import tDM,tVec
+       DM a ! DM
+       Vec b ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexComputeGeometryFEM
+      subroutine DMPlexComputeGeometryFVM(a,b,c,z)
+       import tDM,tVec
+       DM a ! DM
+       Vec b ! Vec
+       Vec c ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexComputeGeometryFVM
+      subroutine DMPlexComputeGradientFVM(a,b,c,d,e,z)
+       import tDM,tVec
+       DM a ! DM
+       PetscFV b ! PetscFV
+       Vec c ! Vec
+       Vec d ! Vec
+       DM e ! DM
+       PetscErrorCode z
+       end subroutine DMPlexComputeGradientFVM
+      subroutine DMPlexGetDataFVM(a,b,c,d,e,z)
+       import tDM,tVec
+       DM a ! DM
+       PetscFV b ! PetscFV
+       Vec c ! Vec
+       Vec d ! Vec
+       DM e ! DM
+       PetscErrorCode z
+       end subroutine DMPlexGetDataFVM
+      subroutine DMPlexCoordinatesToReference(a,b,c,d,e,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscReal d (*) ! PetscReal
+       PetscReal e (*) ! PetscReal
+       PetscErrorCode z
+       end subroutine DMPlexCoordinatesToReference
+      subroutine DMPlexReferenceToCoordinates(a,b,c,d,e,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscReal d (*) ! PetscReal
+       PetscReal e (*) ! PetscReal
+       PetscErrorCode z
+       end subroutine DMPlexReferenceToCoordinates
+      subroutine DMPlexCreateClosureIndex(a,b,z)
+       import tPetscSection,tDM
+       DM a ! DM
+       PetscSection b ! PetscSection
+       PetscErrorCode z
+       end subroutine DMPlexCreateClosureIndex
+      subroutine DMPlexCheckInterfaceCones(a,z)
+       import tDM
+       DM a ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCheckInterfaceCones
+      subroutine DMPlexReconstructGradientsFVM(a,b,c,z)
+       import tDM,tVec
+       DM a ! DM
+       Vec b ! Vec
+       Vec c ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexReconstructGradientsFVM
+      subroutine PetscPartitionerDMPlexPartition(a,b,c,d,e,z)
+       import tPetscSection,tIS,tDM
+       PetscPartitioner a ! PetscPartitioner
+       DM b ! DM
+       PetscSection c ! PetscSection
+       PetscSection d ! PetscSection
+       IS e ! IS
+       PetscErrorCode z
+       end subroutine PetscPartitionerDMPlexPartition
+      subroutine DMPlexGetPartitioner(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscPartitioner b ! PetscPartitioner
+       PetscErrorCode z
+       end subroutine DMPlexGetPartitioner
+      subroutine DMPlexSetPartitioner(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscPartitioner b ! PetscPartitioner
+       PetscErrorCode z
+       end subroutine DMPlexSetPartitioner
+      subroutine DMPlexPartitionLabelClosure(a,b,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexPartitionLabelClosure
+      subroutine DMPlexPartitionLabelAdjacency(a,b,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexPartitionLabelAdjacency
+      subroutine DMPlexPartitionLabelPropagate(a,b,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexPartitionLabelPropagate
+      subroutine DMPlexPartitionLabelInvert(a,b,c,d,z)
+       import tDM,tPetscSF,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscSF c ! PetscSF
+       DMLabel d ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexPartitionLabelInvert
+      subroutine DMPlexPartitionLabelCreateSF(a,b,c,z)
+       import tDM,tPetscSF,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscSF c ! PetscSF
+       PetscErrorCode z
+       end subroutine DMPlexPartitionLabelCreateSF
+      subroutine DMPlexRebalanceSharedPoints(a,b,c,d,e,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscBool c ! PetscBool
+       PetscBool d ! PetscBool
+       PetscBool e ! PetscBool
+       PetscErrorCode z
+       end subroutine DMPlexRebalanceSharedPoints
+      subroutine DMPlexSetMigrationSF(a,b,z)
+       import tDM,tPetscSF
+       DM a ! DM
+       PetscSF b ! PetscSF
+       PetscErrorCode z
+       end subroutine DMPlexSetMigrationSF
+      subroutine DMPlexGetMigrationSF(a,b,z)
+       import tDM,tPetscSF
+       DM a ! DM
+       PetscSF b ! PetscSF
+       PetscErrorCode z
+       end subroutine DMPlexGetMigrationSF
+      subroutine DMPlexSetGlobalToNaturalSF(a,b,z)
+       import tDM,tPetscSF
+       DM a ! DM
+       PetscSF b ! PetscSF
+       PetscErrorCode z
+       end subroutine DMPlexSetGlobalToNaturalSF
+      subroutine DMPlexGetGlobalToNaturalSF(a,b,z)
+       import tDM,tPetscSF
+       DM a ! DM
+       PetscSF b ! PetscSF
+       PetscErrorCode z
+       end subroutine DMPlexGetGlobalToNaturalSF
+      subroutine DMPlexCreateGlobalToNaturalSF(a,b,c,d,z)
+       import tPetscSection,tPetscSF,tDM
+       DM a ! DM
+       PetscSection b ! PetscSection
+       PetscSF c ! PetscSF
+       PetscSF d ! PetscSF
+       PetscErrorCode z
+       end subroutine DMPlexCreateGlobalToNaturalSF
+      subroutine DMPlexGlobalToNaturalBegin(a,b,c,z)
+       import tDM,tVec
+       DM a ! DM
+       Vec b ! Vec
+       Vec c ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexGlobalToNaturalBegin
+      subroutine DMPlexGlobalToNaturalEnd(a,b,c,z)
+       import tDM,tVec
+       DM a ! DM
+       Vec b ! Vec
+       Vec c ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexGlobalToNaturalEnd
+      subroutine DMPlexNaturalToGlobalBegin(a,b,c,z)
+       import tDM,tVec
+       DM a ! DM
+       Vec b ! Vec
+       Vec c ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexNaturalToGlobalBegin
+      subroutine DMPlexNaturalToGlobalEnd(a,b,c,z)
+       import tDM,tVec
+       DM a ! DM
+       Vec b ! Vec
+       Vec c ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexNaturalToGlobalEnd
+      subroutine DMPlexSetAdjacencyUseAnchors(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscBool b ! PetscBool
+       PetscErrorCode z
+       end subroutine DMPlexSetAdjacencyUseAnchors
+      subroutine DMPlexGetAdjacencyUseAnchors(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscBool b ! PetscBool
+       PetscErrorCode z
+       end subroutine DMPlexGetAdjacencyUseAnchors
+      subroutine DMPlexGetAdjacency(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d (*) ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetAdjacency
+      subroutine DMPlexCreateTwoSidedProcessSF(a,b,c,d,e,f,g,h,z)
+       import tPetscSection,tPetscSF,tIS,tDM
+       DM a ! DM
+       PetscSF b ! PetscSF
+       PetscSection c ! PetscSection
+       IS d ! IS
+       PetscSection e ! PetscSection
+       IS f ! IS
+       IS g ! IS
+       PetscSF h ! PetscSF
+       PetscErrorCode z
+       end subroutine DMPlexCreateTwoSidedProcessSF
+      subroutine DMPlexDistributeOwnership(a,b,c,d,e,z)
+       import tPetscSection,tIS,tDM
+       DM a ! DM
+       PetscSection b ! PetscSection
+       IS c ! IS
+       PetscSection d ! PetscSection
+       IS e ! IS
+       PetscErrorCode z
+       end subroutine DMPlexDistributeOwnership
+      subroutine DMPlexStratifyMigrationSF(a,b,c,z)
+       import tDM,tPetscSF
+       DM a ! DM
+       PetscSF b ! PetscSF
+       PetscSF c ! PetscSF
+       PetscErrorCode z
+       end subroutine DMPlexStratifyMigrationSF
+      subroutine DMPlexDistributeField(a,b,c,d,e,f,z)
+       import tPetscSection,tPetscSF,tVec,tDM
+       DM a ! DM
+       PetscSF b ! PetscSF
+       PetscSection c ! PetscSection
+       Vec d ! Vec
+       PetscSection e ! PetscSection
+       Vec f ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexDistributeField
+      subroutine DMPlexDistributeFieldIS(a,b,c,d,e,f,z)
+       import tPetscSection,tPetscSF,tIS,tDM
+       DM a ! DM
+       PetscSF b ! PetscSF
+       PetscSection c ! PetscSection
+       IS d ! IS
+       PetscSection e ! PetscSection
+       IS f ! IS
+       PetscErrorCode z
+       end subroutine DMPlexDistributeFieldIS
+      subroutine DMPlexSetPartitionBalance(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscBool b ! PetscBool
+       PetscErrorCode z
+       end subroutine DMPlexSetPartitionBalance
+      subroutine DMPlexGetPartitionBalance(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscBool b ! PetscBool
+       PetscErrorCode z
+       end subroutine DMPlexGetPartitionBalance
+      subroutine DMPlexGetOverlap(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetOverlap
+      subroutine DMPlexIsDistributed(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscBool b ! PetscBool
+       PetscErrorCode z
+       end subroutine DMPlexIsDistributed
+      subroutine PetscViewerExodusIIGetId(a,b,z)
+       import tPetscViewer
+       PetscViewer a ! PetscViewer
+       integer b ! int
+       PetscErrorCode z
+       end subroutine PetscViewerExodusIIGetId
+      subroutine DMPlexCreateExodus(a,b,c,d,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       PetscInt b ! PetscInt
+       PetscBool c ! PetscBool
+       DM d ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateExodus
+      subroutine DMPlexCompareOrientations(a,b,c,d,e,f,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d (*) ! PetscInt
+       PetscInt e ! PetscInt
+       PetscBool f ! PetscBool
+       PetscErrorCode z
+       end subroutine DMPlexCompareOrientations
+      subroutine DMPlexOrientCell(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d (*) ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexOrientCell
+      subroutine DMPlexReverseCell(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexReverseCell
+      subroutine DMPlexOrient(a,z)
+       import tDM
+       DM a ! DM
+       PetscErrorCode z
+       end subroutine DMPlexOrient
+      subroutine DMPlexInterpolatePointSF(a,b,z)
+       import tDM,tPetscSF
+       DM a ! DM
+       PetscSF b ! PetscSF
+       PetscErrorCode z
+       end subroutine DMPlexInterpolatePointSF
+      subroutine DMPlexInterpolate(a,b,z)
+       import tDM
+       DM a ! DM
+       DM b ! DM
+       PetscErrorCode z
+       end subroutine DMPlexInterpolate
+      subroutine DMPlexCopyCoordinates(a,b,z)
+       import tDM
+       DM a ! DM
+       DM b ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCopyCoordinates
+      subroutine DMPlexUninterpolate(a,b,z)
+       import tDM
+       DM a ! DM
+       DM b ! DM
+       PetscErrorCode z
+       end subroutine DMPlexUninterpolate
+      subroutine DMPlexIsInterpolated(a,b,z)
+       import tDM
+       DM a ! DM
+       DMPlexInterpolatedFlag b ! DMPlexInterpolatedFlag
+       PetscErrorCode z
+       end subroutine DMPlexIsInterpolated
+      subroutine DMPlexIsInterpolatedCollective(a,b,z)
+       import tDM
+       DM a ! DM
+       DMPlexInterpolatedFlag b ! DMPlexInterpolatedFlag
+       PetscErrorCode z
+       end subroutine DMPlexIsInterpolatedCollective
+      subroutine DMPlexGetActivePoint(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetActivePoint
+      subroutine DMPlexSetActivePoint(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexSetActivePoint
+      subroutine DMPlexCellRefinerRefine(a,b,c,d,e,f,g,h,i,z)
+       import tDMPlexCellRefiner
+       DMPlexCellRefiner a ! DMPlexCellRefiner
+       DMPolytopeType b ! DMPolytopeType
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscInt e ! PetscInt
+       DMPolytopeType f (*) ! DMPolytopeType
+       PetscInt g (*) ! PetscInt
+       PetscInt h (*) ! PetscInt
+       PetscInt i (*) ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexCellRefinerRefine
+      subroutine DMPlexCellRefinerGetAffineTransforms(a,b,c,d,e,f,z)
+       import tDMPlexCellRefiner
+       DMPlexCellRefiner a ! DMPlexCellRefiner
+       DMPolytopeType b ! DMPolytopeType
+       PetscInt c ! PetscInt
+       PetscReal d (*) ! PetscReal
+       PetscReal e (*) ! PetscReal
+       PetscReal f (*) ! PetscReal
+       PetscErrorCode z
+       end subroutine DMPlexCellRefinerGetAffineTransforms
+      subroutine DMPlexCellRefinerGetAffineFaceTransforms(a,b,c,d,e,f,g,&
+     &z)
+       import tDMPlexCellRefiner
+       DMPlexCellRefiner a ! DMPlexCellRefiner
+       DMPolytopeType b ! DMPolytopeType
+       PetscInt c ! PetscInt
+       PetscReal d (*) ! PetscReal
+       PetscReal e (*) ! PetscReal
+       PetscReal f (*) ! PetscReal
+       PetscReal g (*) ! PetscReal
+       PetscErrorCode z
+       end subroutine DMPlexCellRefinerGetAffineFaceTransforms
+      subroutine DMPlexCreateProcessSF(a,b,c,d,z)
+       import tDM,tPetscSF,tIS
+       DM a ! DM
+       PetscSF b ! PetscSF
+       IS c ! IS
+       PetscSF d ! PetscSF
+       PetscErrorCode z
+       end subroutine DMPlexCreateProcessSF
+      subroutine DMPlexCreateCoarsePointIS(a,b,z)
+       import tDM,tIS
+       DM a ! DM
+       IS b ! IS
+       PetscErrorCode z
+       end subroutine DMPlexCreateCoarsePointIS
+      subroutine DMPlexSetRefinementUniform(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscBool b ! PetscBool
+       PetscErrorCode z
+       end subroutine DMPlexSetRefinementUniform
+      subroutine DMPlexGetRefinementUniform(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscBool b ! PetscBool
+       PetscErrorCode z
+       end subroutine DMPlexGetRefinementUniform
+      subroutine DMPlexSetRefinementLimit(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscReal b ! PetscReal
+       PetscErrorCode z
+       end subroutine DMPlexSetRefinementLimit
+      subroutine DMPlexGetRefinementLimit(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscReal b ! PetscReal
+       PetscErrorCode z
+       end subroutine DMPlexGetRefinementLimit
+      subroutine DMPlexSetRefinementFunction(a,b,z)
+       import tDM
+       DM a ! DM
+       external b ! void function pointer
+       PetscErrorCode z
+       end subroutine DMPlexSetRefinementFunction
+      subroutine DMPlexGetRefinementFunction(a,b,z)
+       import tDM
+       DM a ! DM
+       external b ! void function pointer
+       PetscErrorCode z
+       end subroutine DMPlexGetRefinementFunction
+      subroutine DMPlexMarkBoundaryFaces(a,b,c,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       PetscInt b ! PetscInt
+       DMLabel c ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexMarkBoundaryFaces
+      subroutine DMPlexLabelComplete(a,b,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexLabelComplete
+      subroutine DMPlexLabelAddCells(a,b,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexLabelAddCells
+      subroutine DMPlexLabelAddFaceCells(a,b,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexLabelAddFaceCells
+      subroutine DMPlexLabelClearCells(a,b,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexLabelClearCells
+      subroutine DMPlexLabelCohesiveComplete(a,b,c,d,e,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       DMLabel c ! DMLabel
+       PetscBool d ! PetscBool
+       DM e ! DM
+       PetscErrorCode z
+       end subroutine DMPlexLabelCohesiveComplete
+      subroutine DMPlexCreateHybridMesh(a,b,c,d,e,f,g,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       DMLabel c ! DMLabel
+       DMLabel d ! DMLabel
+       DMLabel e ! DMLabel
+       DM f ! DM
+       DM g ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateHybridMesh
+      subroutine DMPlexGetOrientedFace(a,b,c,d,e,f,g,h,i,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d (*) ! PetscInt
+       PetscInt e ! PetscInt
+       PetscInt f (*) ! PetscInt
+       PetscInt g (*) ! PetscInt
+       PetscInt h (*) ! PetscInt
+       PetscBool i ! PetscBool
+       PetscErrorCode z
+       end subroutine DMPlexGetOrientedFace
+      subroutine DMPlexCreateSubmesh(a,b,c,d,e,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscInt c ! PetscInt
+       PetscBool d ! PetscBool
+       DM e ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateSubmesh
+      subroutine DMPlexFilter(a,b,c,d,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscInt c ! PetscInt
+       DM d ! DM
+       PetscErrorCode z
+       end subroutine DMPlexFilter
+      subroutine DMPlexGetSubpointMap(a,b,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexGetSubpointMap
+      subroutine DMPlexSetSubpointMap(a,b,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexSetSubpointMap
+      subroutine DMPlexGetSubpointIS(a,b,z)
+       import tDM,tIS
+       DM a ! DM
+       IS b ! IS
+       PetscErrorCode z
+       end subroutine DMPlexGetSubpointIS
+      subroutine DMGetEnclosureRelation(a,b,c,z)
+       import tDM
+       DM a ! DM
+       DM b ! DM
+       DMEnclosureType c ! DMEnclosureType
+       PetscErrorCode z
+       end subroutine DMGetEnclosureRelation
+      subroutine DMGetEnclosurePoint(a,b,c,d,e,z)
+       import tDM
+       DM a ! DM
+       DM b ! DM
+       DMEnclosureType c ! DMEnclosureType
+       PetscInt d ! PetscInt
+       PetscInt e ! PetscInt
+       PetscErrorCode z
+       end subroutine DMGetEnclosurePoint
+      subroutine DMPlexGetSimplexOrBoxCells(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetSimplexOrBoxCells
+      subroutine DMPlexGetSubdomainSection(a,b,z)
+       import tPetscSection,tDM
+       DM a ! DM
+       PetscSection b ! PetscSection
+       PetscErrorCode z
+       end subroutine DMPlexGetSubdomainSection
+      subroutine DMPlexGetChart(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetChart
+      subroutine DMPlexSetChart(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexSetChart
+      subroutine DMPlexGetConeSize(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetConeSize
+      subroutine DMPlexSetConeSize(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexSetConeSize
+      subroutine DMPlexAddConeSize(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexAddConeSize
+      subroutine DMPlexGetConeRecursiveVertices(a,b,c,z)
+       import tDM,tIS
+       DM a ! DM
+       IS b ! IS
+       IS c ! IS
+       PetscErrorCode z
+       end subroutine DMPlexGetConeRecursiveVertices
+      subroutine DMPlexGetConeRecursive(a,b,c,d,e,z)
+       import tPetscSection,tIS,tDM
+       DM a ! DM
+       IS b ! IS
+       PetscInt c ! PetscInt
+       IS d (*) ! IS
+       PetscSection e (*) ! PetscSection
+       PetscErrorCode z
+       end subroutine DMPlexGetConeRecursive
+      subroutine DMPlexRestoreConeRecursive(a,b,c,d,e,z)
+       import tPetscSection,tIS,tDM
+       DM a ! DM
+       IS b ! IS
+       PetscInt c ! PetscInt
+       IS d (*) ! IS
+       PetscSection e (*) ! PetscSection
+       PetscErrorCode z
+       end subroutine DMPlexRestoreConeRecursive
+      subroutine DMPlexSetCone(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c (*) ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexSetCone
+      subroutine DMPlexSetConeOrientation(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c (*) ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexSetConeOrientation
+      subroutine DMPlexInsertCone(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexInsertCone
+      subroutine DMPlexInsertConeOrientation(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexInsertConeOrientation
+      subroutine DMPlexGetSupportSize(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetSupportSize
+      subroutine DMPlexSetSupportSize(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexSetSupportSize
+      subroutine DMPlexSetSupport(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c (*) ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexSetSupport
+      subroutine DMPlexInsertSupport(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexInsertSupport
+      subroutine DMPlexGetMaxSizes(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetMaxSizes
+      subroutine DMPlexSymmetrize(a,z)
+       import tDM
+       DM a ! DM
+       PetscErrorCode z
+       end subroutine DMPlexSymmetrize
+      subroutine DMPlexStratify(a,z)
+       import tDM
+       DM a ! DM
+       PetscErrorCode z
+       end subroutine DMPlexStratify
+      subroutine DMPlexComputeCellTypes(a,z)
+       import tDM
+       DM a ! DM
+       PetscErrorCode z
+       end subroutine DMPlexComputeCellTypes
+      subroutine DMPlexGetDepthLabel(a,b,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexGetDepthLabel
+      subroutine DMPlexGetDepth(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetDepth
+      subroutine DMPlexGetDepthStratum(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetDepthStratum
+      subroutine DMPlexGetHeightStratum(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetHeightStratum
+      subroutine DMPlexGetPointDepth(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetPointDepth
+      subroutine DMPlexGetPointHeight(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetPointHeight
+      subroutine DMPlexGetCellTypeLabel(a,b,z)
+       import tDM,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexGetCellTypeLabel
+      subroutine DMPlexGetCellType(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       DMPolytopeType c ! DMPolytopeType
+       PetscErrorCode z
+       end subroutine DMPlexGetCellType
+      subroutine DMPlexSetCellType(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       DMPolytopeType c ! DMPolytopeType
+       PetscErrorCode z
+       end subroutine DMPlexSetCellType
+      subroutine DMPlexSetClosurePermutationTensor(a,b,c,z)
+       import tPetscSection,tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscSection c ! PetscSection
+       PetscErrorCode z
+       end subroutine DMPlexSetClosurePermutationTensor
+      subroutine DMPlexGetGhostCellStratum(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetGhostCellStratum
+      subroutine DMPlexGetCellNumbering(a,b,z)
+       import tDM,tIS
+       DM a ! DM
+       IS b ! IS
+       PetscErrorCode z
+       end subroutine DMPlexGetCellNumbering
+      subroutine DMPlexGetVertexNumbering(a,b,z)
+       import tDM,tIS
+       DM a ! DM
+       IS b ! IS
+       PetscErrorCode z
+       end subroutine DMPlexGetVertexNumbering
+      subroutine DMPlexCreatePointNumbering(a,b,z)
+       import tDM,tIS
+       DM a ! DM
+       IS b ! IS
+       PetscErrorCode z
+       end subroutine DMPlexCreatePointNumbering
+      subroutine DMPlexCreateRankField(a,b,z)
+       import tDM,tVec
+       DM a ! DM
+       Vec b ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexCreateRankField
+      subroutine DMPlexCreateLabelField(a,b,c,z)
+       import tDM,tVec,tDMLabel
+       DM a ! DM
+       DMLabel b ! DMLabel
+       Vec c ! Vec
+       PetscErrorCode z
+       end subroutine DMPlexCreateLabelField
+      subroutine DMPlexCheckSymmetry(a,z)
+       import tDM
+       DM a ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCheckSymmetry
+      subroutine DMPlexCheckSkeleton(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexCheckSkeleton
+      subroutine DMPlexCheckFaces(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexCheckFaces
+      subroutine DMPlexCheckGeometry(a,z)
+       import tDM
+       DM a ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCheckGeometry
+      subroutine DMPlexCheckPointSF(a,z)
+       import tDM
+       DM a ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCheckPointSF
+      subroutine DMPlexCheckCellShape(a,b,c,z)
+       import tDM
+       DM a ! DM
+       PetscBool b ! PetscBool
+       PetscReal c ! PetscReal
+       PetscErrorCode z
+       end subroutine DMPlexCheckCellShape
+      subroutine DMPlexComputeOrthogonalQuality(a,b,c,d,e,z)
+       import tDM,tVec,tDMLabel
+       DM a ! DM
+       PetscFV b ! PetscFV
+       PetscReal c ! PetscReal
+       Vec d ! Vec
+       DMLabel e ! DMLabel
+       PetscErrorCode z
+       end subroutine DMPlexComputeOrthogonalQuality
+      subroutine DMPlexGetRegularRefinement(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscBool b ! PetscBool
+       PetscErrorCode z
+       end subroutine DMPlexGetRegularRefinement
+      subroutine DMPlexSetRegularRefinement(a,b,z)
+       import tDM
+       DM a ! DM
+       PetscBool b ! PetscBool
+       PetscErrorCode z
+       end subroutine DMPlexSetRegularRefinement
+      subroutine DMPlexGetCellRefinerType(a,b,z)
+       import tDM
+       DM a ! DM
+       DMPlexCellRefinerType b ! DMPlexCellRefinerType
+       PetscErrorCode z
+       end subroutine DMPlexGetCellRefinerType
+      subroutine DMPlexSetCellRefinerType(a,b,z)
+       import tDM
+       DM a ! DM
+       DMPlexCellRefinerType b ! DMPlexCellRefinerType
+       PetscErrorCode z
+       end subroutine DMPlexSetCellRefinerType
+      subroutine DMPlexGetAnchors(a,b,c,z)
+       import tPetscSection,tIS,tDM
+       DM a ! DM
+       PetscSection b ! PetscSection
+       IS c ! IS
+       PetscErrorCode z
+       end subroutine DMPlexGetAnchors
+      subroutine DMPlexSetAnchors(a,b,c,z)
+       import tPetscSection,tIS,tDM
+       DM a ! DM
+       PetscSection b ! PetscSection
+       IS c ! IS
+       PetscErrorCode z
+       end subroutine DMPlexSetAnchors
+      subroutine DMPlexSetReferenceTree(a,b,z)
+       import tDM
+       DM a ! DM
+       DM b ! DM
+       PetscErrorCode z
+       end subroutine DMPlexSetReferenceTree
+      subroutine DMPlexGetReferenceTree(a,b,z)
+       import tDM
+       DM a ! DM
+       DM b ! DM
+       PetscErrorCode z
+       end subroutine DMPlexGetReferenceTree
+      subroutine DMPlexReferenceTreeGetChildSymmetry(a,b,c,d,e,f,g,h,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscInt e ! PetscInt
+       PetscInt f ! PetscInt
+       PetscInt g ! PetscInt
+       PetscInt h ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexReferenceTreeGetChildSymmetry
+      subroutine DMPlexCreateDefaultReferenceTree(a,b,c,d,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       PetscInt b ! PetscInt
+       PetscBool c ! PetscBool
+       DM d ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateDefaultReferenceTree
+      subroutine DMPlexSetTree(a,b,c,d,z)
+       import tPetscSection,tDM
+       DM a ! DM
+       PetscSection b ! PetscSection
+       PetscInt c (*) ! PetscInt
+       PetscInt d (*) ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexSetTree
+      subroutine DMPlexGetTree(a,b,c,d,e,f,z)
+       import tPetscSection,tDM
+       DM a ! DM
+       PetscSection b ! PetscSection
+       PetscInt c (*) ! PetscInt
+       PetscInt d (*) ! PetscInt
+       PetscSection e ! PetscSection
+       PetscInt f (*) ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetTree
+      subroutine DMPlexGetTreeParent(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexGetTreeParent
+      subroutine DMPlexTransferVecTree(a,b,c,d,e,f,g,h,i,j,z)
+       import tDM,tPetscSF,tVec
+       DM a ! DM
+       Vec b ! Vec
+       DM c ! DM
+       Vec d ! Vec
+       PetscSF e ! PetscSF
+       PetscSF f ! PetscSF
+       PetscInt g ! PetscInt
+       PetscInt h ! PetscInt
+       PetscBool i ! PetscBool
+       PetscReal j ! PetscReal
+       PetscErrorCode z
+       end subroutine DMPlexTransferVecTree
+      subroutine DMPlexCreateDoublet(a,b,c,d,e,f,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       PetscInt b ! PetscInt
+       PetscBool c ! PetscBool
+       PetscBool d ! PetscBool
+       PetscReal e ! PetscReal
+       DM f ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateDoublet
+      subroutine DMPlexCreateSquareBoundary(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscReal b (*) ! PetscReal
+       PetscReal c (*) ! PetscReal
+       PetscInt d (*) ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexCreateSquareBoundary
+      subroutine DMPlexCreateCubeBoundary(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscReal b (*) ! PetscReal
+       PetscReal c (*) ! PetscReal
+       PetscInt d (*) ! PetscInt
+       PetscErrorCode z
+       end subroutine DMPlexCreateCubeBoundary
+      subroutine DMPlexCreateWedgeBoxMesh(a,b,c,d,e,f,g,h,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       PetscInt b (*) ! PetscInt
+       PetscReal c (*) ! PetscReal
+       PetscReal d (*) ! PetscReal
+       DMBoundaryType e (*) ! DMBoundaryType
+       PetscBool f ! PetscBool
+       PetscBool g ! PetscBool
+       DM h ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateWedgeBoxMesh
+      subroutine DMPlexCreateHexCylinderMesh(a,b,c,d,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       PetscInt b ! PetscInt
+       DMBoundaryType c ! DMBoundaryType
+       DM d ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateHexCylinderMesh
+      subroutine DMPlexCreateWedgeCylinderMesh(a,b,c,d,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       PetscInt b ! PetscInt
+       PetscBool c ! PetscBool
+       DM d ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateWedgeCylinderMesh
+      subroutine DMPlexCreateSphereMesh(a,b,c,d,e,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       PetscInt b ! PetscInt
+       PetscBool c ! PetscBool
+       PetscReal d ! PetscReal
+       DM e ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateSphereMesh
+      subroutine DMPlexCreateBallMesh(a,b,c,d,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       PetscInt b ! PetscInt
+       PetscReal c ! PetscReal
+       DM d ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateBallMesh
+      subroutine DMPlexCreate(a,b,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       DM b ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreate
+      subroutine DMPlexCreateFromCellListParallelPetsc(a,b,c,d,e,f,g,h,i&
+     &,j,k,l,z)
+       import tDM,tPetscSF
+       MPI_Comm a ! MPI_Comm
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscInt e ! PetscInt
+       PetscInt f ! PetscInt
+       PetscBool g ! PetscBool
+       PetscInt h (*) ! PetscInt
+       PetscInt i ! PetscInt
+       PetscReal j (*) ! PetscReal
+       PetscSF k ! PetscSF
+       DM l ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateFromCellListParallelPetsc
+      subroutine DMPlexCreateFromCellListParallel(a,b,c,d,e,f,g,h,i,j,k,&
+     &z)
+       import tDM,tPetscSF
+       MPI_Comm a ! MPI_Comm
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscInt e ! PetscInt
+       PetscBool f ! PetscBool
+       integer g (*) ! int
+       PetscInt h ! PetscInt
+       PetscReal i (*) ! PetscReal
+       PetscSF j ! PetscSF
+       DM k ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateFromCellListParallel
+      subroutine DMPlexCreateFromCellListPetsc(a,b,c,d,e,f,g,h,i,j,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscInt e ! PetscInt
+       PetscBool f ! PetscBool
+       PetscInt g (*) ! PetscInt
+       PetscInt h ! PetscInt
+       PetscReal i (*) ! PetscReal
+       DM j ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateFromCellListPetsc
+      subroutine DMPlexCreateFromCellList(a,b,c,d,e,f,g,h,i,j,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       PetscInt b ! PetscInt
+       PetscInt c ! PetscInt
+       PetscInt d ! PetscInt
+       PetscInt e ! PetscInt
+       PetscBool f ! PetscBool
+       integer g (*) ! int
+       PetscInt h ! PetscInt
+       double precision i (*) ! double
+       DM j ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateFromCellList
+      subroutine DMPlexCreateFromDAG(a,b,c,d,e,f,g,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscInt c (*) ! PetscInt
+       PetscInt d (*) ! PetscInt
+       PetscInt e (*) ! PetscInt
+       PetscInt f (*) ! PetscInt
+       PetscScalar g (*) ! PetscScalar
+       PetscErrorCode z
+       end subroutine DMPlexCreateFromDAG
+      subroutine DMPlexCreateReferenceCellByType(a,b,c,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       DMPolytopeType b ! DMPolytopeType
+       DM c ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateReferenceCellByType
+      subroutine DMPlexCreateReferenceCell(a,b,c,d,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       PetscInt b ! PetscInt
+       PetscBool c ! PetscBool
+       DM d ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateReferenceCell
+      subroutine DMPlexCreateCGNS(a,b,c,d,z)
+       import tDM
+       MPI_Comm a ! MPI_Comm
+       PetscInt b ! PetscInt
+       PetscBool c ! PetscBool
+       DM d ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateCGNS
+      subroutine DMPlexCreateGmsh(a,b,c,d,z)
+       import tDM,tPetscViewer
+       MPI_Comm a ! MPI_Comm
+       PetscViewer b ! PetscViewer
+       PetscBool c ! PetscBool
+       DM d ! DM
+       PetscErrorCode z
+       end subroutine DMPlexCreateGmsh
+      subroutine DMPlexSnapToGeomModel(a,b,c,d,z)
+       import tDM
+       DM a ! DM
+       PetscInt b ! PetscInt
+       PetscScalar c (*) ! PetscScalar
+       PetscScalar d (*) ! PetscScalar
+       PetscErrorCode z
+       end subroutine DMPlexSnapToGeomModel
+      subroutine DMPlexGetOrdering(a,b,c,d,z)
+       import tDM,tIS,tDMLabel
+       DM a ! DM
+       MatOrderingType b ! MatOrderingType
+       DMLabel c ! DMLabel
+       IS d ! IS
+       PetscErrorCode z
+       end subroutine DMPlexGetOrdering
+      subroutine DMPlexPermute(a,b,c,z)
+       import tDM,tIS
+       DM a ! DM
+       IS b ! IS
+       DM c ! DM
+       PetscErrorCode z
+       end subroutine DMPlexPermute
